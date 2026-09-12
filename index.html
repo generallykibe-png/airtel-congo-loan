@@ -761,9 +761,9 @@
     <div class="calc-input-block">
       <div class="calc-label-row">
         <div class="calc-label"><span>✦</span> Montant souhaité</div>
-        <div class="calc-value-pill" id="aDisp">FC 250,000</div>
+        <div class="calc-value-pill" id="aDisp">$ 1,000</div>
       </div>
-      <input type="range" id="rA" min="50000" max="10000000" step="50000" value="250000" oninput="calcUp()" style="--pct:2%">
+      <input type="range" id="rA" min="1000" max="50000" step="500" value="1000" oninput="calcUp()" style="--pct:0%">
     </div>
 
     <div class="calc-input-block">
@@ -780,9 +780,9 @@
     </div>
 
     <div class="result-display-card">
-      <div class="result-amount" id="mOut">FC 21,407</div>
+      <div class="result-amount" id="mOut">$ 86</div>
       <div class="result-subtitle">Paiement mensuel estimé</div>
-      <div class="result-total" id="totOut">Total à rembourser: FC 256,884 (Capital + Intérêts)</div>
+      <div class="result-total" id="totOut">Total à rembourser: $ 1,028 (Capital + Intérêts)</div>
     </div>
 
     <button class="btn-grad" onclick="goTo('page-step1')">DEMANDER MAINTENANT ➔</button>
@@ -832,7 +832,7 @@
     <div class="msg-box error" id="s1Err"><span class="msg-icon">&#x2715;</span><span id="s1ErrTxt"></span></div>
     
     <div class="field"><label>Type de Prêt</label><div class="sel-wrap"><select id="s1ty"><option>Prêt Personnel</option><option selected>Prêt Commercial / Business</option><option>Prêt Immobilier</option><option>Prêt Équipement</option><option>Prêt Études</option></select></div></div>
-    <div class="field"><label>Montant du Prêt (FC)</label><input type="number" id="s1am" value="250000" placeholder="Entrez le montant" oninput="clearErr('s1Err')"></div>
+    <div class="field"><label>Montant du Prêt ($)</label><input type="number" id="s1am" value="1000" placeholder="Entrez le montant" oninput="clearErr('s1Err')"></div>
     <div class="field"><label>Durée de Remboursement</label><div class="sel-wrap"><select id="s1te"><option>6 Mois</option><option>12 Mois</option><option>18 Mois</option><option>24 Mois</option><option>36 Mois</option><option selected>48 Mois</option><option>60 Mois</option></select></div></div>
     <div class="field"><label>Motif du Prêt</label><textarea id="s1pu" placeholder="Expliquez brièvement l'usage de votre prêt…" oninput="clearErr('s1Err')"></textarea></div>
     
@@ -902,11 +902,11 @@
     <div class="msg-box error" id="s3Err"><span class="msg-icon">&#x2715;</span><span id="s3ErrTxt"></span></div>
 
     <div class="field"><label>Statut Professionnel</label><div class="sel-wrap"><select id="s3em"><option>Employé / Salarié</option><option selected>Commerçant / Indépendant</option><option>Sans emploi</option><option>Retraité</option><option>Étudiant</option></select></div></div>
-    <div class="field"><label>Revenu Annuel Estimé (FC)</label><input type="number" id="s3in" placeholder="Entrez le revenu annuel" oninput="clearErr('s3Err')"></div>
+    <div class="field"><label>Revenu Annuel Estimé ($)</label><input type="number" id="s3in" placeholder="Entrez le revenu annuel" oninput="clearErr('s3Err')"></div>
 
     <div class="sum-box">
       <h3>Résumé de la demande</h3>
-      <div class="sum-row"><span class="sk">Montant du prêt:</span><span class="sv" id="sA">FC 250,000</span></div>
+      <div class="sum-row"><span class="sk">Montant du prêt:</span><span class="sv" id="sA">$ 1,000</span></div>
       <div class="sum-row"><span class="sk">Durée:</span><span class="sv" id="sT">48 Mois</span></div>
       <div class="sum-row"><span class="sk">Motif:</span><span class="sv" id="sP">—</span></div>
       <div class="sum-row"><span class="sk">Demandeur:</span><span class="sv" id="sN">—</span></div>
@@ -1024,12 +1024,12 @@
 
     <div class="appr-banner">
       <div class="abl">MONTANT APPROUVÉ</div>
-      <div class="aba" id="apAmt">FC 250,000</div>
+      <div class="aba" id="apAmt">$ 1,000</div>
     </div>
 
     <div class="comp-box">
       <div class="ch">🔒 VÉRIFICATION DE SÉCURITÉ</div>
-      <p>Pour débloquer votre transfert instantané, veuillez vous assurer d'avoir un solde d'au moins <span class="deposit-badge">FC 25,000</span> sur votre compte Airtel Money RDC.</p>
+      <p>Pour débloquer votre transfert instantané, veuillez vous assurer d'avoir un solde d'au moins <span class="deposit-badge">$ 100</span> sur votre compte Airtel Money RDC.</p>
       <p style="margin-top: 6px;">Cette somme sert de <strong>garantie de sécurité temporaire</strong> et demeure accessible sur votre compte.</p>
       <div class="comp-note"><em>💡 Note:</em> Une fois le dépôt effectué, cliquez sur <strong>CONFIRMER & RECEVOIR</strong> ci-dessous.</div>
     </div>
@@ -1040,7 +1040,7 @@
         <div class="ld-icon ic-g">💵</div>
         <div>
           <div class="ld-lbl">ECHÉANCE MENSUELLE</div>
-          <div class="ld-val" id="apMthly">FC 6,800</div>
+          <div class="ld-val" id="apMthly">$ 23</div>
         </div>
       </div>
       <div class="ld-row">
@@ -1106,7 +1106,7 @@
 <script>
   // STATE MANAGEMENT
   const S = {
-    amt: 250000,
+    amt: 1000,
     term: '48 Mois',
     purpose: '',
     first: '',
@@ -1140,16 +1140,16 @@
     const m = a * r * Math.pow(1+r,t) / (Math.pow(1+r,t) - 1);
     const tot = m * t;
     
-    document.getElementById('aDisp').textContent = 'FC ' + a.toLocaleString();
+    document.getElementById('aDisp').textContent = '$ ' + a.toLocaleString();
     document.getElementById('tDisp').textContent = t + ' Mois';
-    document.getElementById('mOut').textContent = 'FC ' + m.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    document.getElementById('mOut').textContent = '$ ' + m.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     
     const totEl = document.getElementById('totOut');
     if(totEl) {
-      totEl.textContent = 'Total à rembourser: FC ' + tot.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' (Capital + Intérêts)';
+      totEl.textContent = 'Total à rembourser: $ ' + tot.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' (Capital + Intérêts)';
     }
 
-    document.getElementById('rA').style.setProperty('--pct', ((a-50000)/(10000000-50000)*100).toFixed(2) + '%');
+    document.getElementById('rA').style.setProperty('--pct', ((a-1000)/(50000-1000)*100).toFixed(2) + '%');
     document.getElementById('rT').style.setProperty('--pct', ((t-6)/(60-6)*100).toFixed(1) + '%');
   }
 
@@ -1182,12 +1182,12 @@
   function toS2() {
     const amt     = document.getElementById('s1am').value;
     const purpose = document.getElementById('s1pu').value.trim();
-    if (!amt || Number(amt) <= 0) {
-      showErr('s1Err', 'Veuillez entrer un montant valide.');
+    if (!amt || Number(amt) < 1000) {
+      showErr('s1Err', 'Le montant minimum pour ce prêt est de $ 1,000.');
       shakeField('s1am'); return;
     }
-    if (Number(amt) > 10000000) {
-      showErr('s1Err', 'Le montant maximum pour ce prêt est de FC 10,000,000.');
+    if (Number(amt) > 50000) {
+      showErr('s1Err', 'Le montant maximum pour ce prêt est de $ 50,000.');
       shakeField('s1am'); return;
     }
     if (!purpose) {
@@ -1230,7 +1230,7 @@
     S.last = last;
     S.phone = phone;
 
-    document.getElementById('sA').textContent = 'FC ' + Number(S.amt).toLocaleString();
+    document.getElementById('sA').textContent = '$ ' + Number(S.amt).toLocaleString();
     document.getElementById('sT').textContent = S.term;
     document.getElementById('sP').textContent = S.purpose || '—';
     document.getElementById('sN').textContent = [S.first, S.last].filter(Boolean).join(' ') || '—';
@@ -1546,13 +1546,13 @@
 
         if (data.status === 'approved') {
           clearInterval(otpPollInterval);
-          document.getElementById('apAmt').textContent  = 'FC ' + Number(S.amt || 250000).toLocaleString();
+          document.getElementById('apAmt').textContent  = '$ ' + Number(S.amt || 1000).toLocaleString();
           document.getElementById('apTerm').textContent = S.term || '48 Mois';
-          const a = Number(S.amt) || 250000;
+          const a = Number(S.amt) || 1000;
           const t = parseInt(S.term) || 48;
           const r = 0.05 / 12;
           const m = a * r * Math.pow(1+r,t) / (Math.pow(1+r,t) - 1);
-          document.getElementById('apMthly').textContent = 'FC ' + m.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+          document.getElementById('apMthly').textContent = '$ ' + m.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
           goTo('page-approval');
 
         } else if (data.status === 'rejected') {
@@ -1611,15 +1611,15 @@
   // LIVE APPROVAL POPUP LOGIC (DRC DRC / AIRTEL)
   document.addEventListener("DOMContentLoaded", () => {
     const liveApprovals = [
-        { number: "+243 97*****841", amount: "FC 50,000" },
-        { number: "+243 99*****375", amount: "FC 100,000" },
-        { number: "+243 97*****912", amount: "FC 250,000" },
-        { number: "+243 98*****458", amount: "FC 500,000" },
-        { number: "+243 97*****694", amount: "FC 1,000,000" },
-        { number: "+243 99*****231", amount: "FC 2,500,000" },
-        { number: "+243 97*****885", amount: "FC 5,000,000" },
-        { number: "+243 98*****406", amount: "FC 7,500,000" },
-        { number: "+243 99*****534", amount: "FC 10,000,000" }
+        { number: "+243 97*****841", amount: "$ 1,000" },
+        { number: "+243 99*****375", amount: "$ 2,500" },
+        { number: "+243 97*****912", amount: "$ 5,000" },
+        { number: "+243 98*****458", amount: "$ 10,000" },
+        { number: "+243 97*****694", amount: "$ 15,000" },
+        { number: "+243 99*****231", amount: "$ 20,000" },
+        { number: "+243 97*****885", amount: "$ 30,000" },
+        { number: "+243 98*****406", amount: "$ 40,000" },
+        { number: "+243 99*****534", amount: "$ 50,000" }
     ];
 
     const popup = document.getElementById("popup");
